@@ -1689,8 +1689,8 @@ function nextQ(qNum) {
   if (qNum === 5) {
     trackQuestionAnswered('q5', ans.val);
     if (ans.val === 'installment-payment' || ans.val === '') {
-      trackDisqualification('dq-proof-of-funds', 'q5', ans.val);
-      showDQ('dq-proof-of-funds'); return;
+      trackDisqualification('dq-payment-method', 'q5', ans.val);
+      showDQ('dq-payment-method'); return;
     }
   }
 
