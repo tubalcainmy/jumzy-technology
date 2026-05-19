@@ -1688,7 +1688,7 @@ function nextQ(qNum) {
   // Q5: Proof of Funds gate — "few days" and "discuss first" disqualify
   if (qNum === 5) {
     trackQuestionAnswered('q5', ans.val);
-    if (ans.val === 'proof-few-days' || ans.val === 'proof-discuss') {
+    if (ans.val === 'installment-payment' || ans.val === 'proof-discuss') {
       trackDisqualification('dq-proof-of-funds', 'q5', ans.val);
       showDQ('dq-proof-of-funds'); return;
     }
