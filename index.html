@@ -1896,7 +1896,7 @@ function showGreenResult(payback, monthly, roi, cumSavings, sysCost, monthlyTota
   // WhatsApp CTA
   const msg = `Hi! I just completed the Tubalcain Solar ROI Assessment and my home QUALIFIED (Green). My results: ${payback.toFixed(1)}-year payback, ₦${Math.round(monthly).toLocaleString()}/month savings. I'd like to book my free energy assessment. My name is ${document.getElementById('firstName').value}.`;
   trackWhatsAppClick('green');
-  document.getElementById('greenCTA').href = `https://wa.me/2347031570700?text=${encodeURIComponent(msg)}`;
+  document.getElementById('greenCTA').href = `https://wa.me/2348108113426?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultGreen').classList.add('show');
   window.scrollTo({top:0,behavior:'smooth'});
@@ -1935,7 +1935,7 @@ function showAmberResult(payback, monthly, name) {
 
   const msg = `Hi! I completed the Tubalcain Solar ROI Assessment. My home got a YELLOW result, some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
   trackWhatsAppClick('amber');
-  document.getElementById('amberCTA').href = `https://wa.me/2347031570700?text=${encodeURIComponent(msg)}`;
+  document.getElementById('amberCTA').href = `https://wa.me/2348108113426?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultAmber').classList.add('show');
   window.scrollTo({top:0,behavior:'smooth'});
