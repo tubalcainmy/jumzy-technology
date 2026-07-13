@@ -1587,7 +1587,7 @@ function nextQLoc() {
   trackQuestionAnswered('q-loc', cityVal);
 
   // Disqualify if city not in active list
-  if (cityVal === 'other' || !ACTIVE_CITIES.includes(cityVal)) {
+  if (cityVal === '' || !ACTIVE_CITIES.includes(cityVal)) {
     trackDisqualification('dq-location', 'q-loc', cityVal);
     showDQ('dq-location');
     return;
@@ -1649,7 +1649,7 @@ function nextQ(qNum) {
   // Q1: Total spend gate — disqualify if under ₦30k combined
   if (qNum === 1) {
     trackQuestionAnswered('q1', ans.val);
-    if (ans.val === 'under20k' || ans.val === '20k-30k') {
+    if (ans.val === 'under20k' || ans.val === '') {
       trackDisqualification('dq-spend', 'q1', ans.val);
       showDQ('dq-spend'); return;
     }
