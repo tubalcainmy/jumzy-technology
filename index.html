@@ -1566,7 +1566,7 @@ window.addEventListener('beforeunload', function() {
 // Add/remove city values here when coverage changes
 const ACTIVE_CITIES = [
   'Ibadan',
-  '',
+  'other',
   '',
   '',
   '',
@@ -1679,7 +1679,7 @@ function nextQ(qNum) {
   // Q4: Budget gate — disqualify under ₦1.5M
   if (qNum === 4) {
     trackQuestionAnswered('q4', ans.val);
-    if (ans.val === 'under500k' || ans.val === '500k-1m' || ans.val === '1m-2m') {
+    if (ans.val === 'under500k' || ans.val === '500k-1m' || ans.val === '') {
       trackDisqualification('dq-budget', 'q4', ans.val);
       showDQ('dq-budget'); return;
     }
@@ -1688,7 +1688,7 @@ function nextQ(qNum) {
   // Q5: Proof of Funds gate — "few days" and "discuss first" disqualify
   if (qNum === 5) {
     trackQuestionAnswered('q5', ans.val);
-    if (ans.val === 'installment-payment' || ans.val === '') {
+    if (ans.val === '' || ans.val === '') {
       trackDisqualification('dq-payment-method', 'q5', ans.val);
       showDQ('dq-payment-method'); return;
     }
